@@ -6,11 +6,17 @@ export default function ListEmployee() {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
+    console.log('Fetching employee data...');
     axios.get('https://f932-14-195-132-106.ngrok-free.app/listEmployees')
       .then(response => {
-      
-        console.log("API Response:", response.data);
-        setEmployees(response.data);
+        console.log("API Response:", response);
+        if (response.headers['content-type'].includes('application/json')) {
+          console.log('Setting employee data');
+          setEmployees(response.data);
+        } else {
+          console.error('Unexpected content type:', response.headers['content-type']);
+          console.error('Response:', response);
+        }
       })
       .catch(error => {
         console.error("Error fetching employees:", error);
