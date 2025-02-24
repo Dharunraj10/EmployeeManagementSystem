@@ -10,7 +10,7 @@ export default function SearchBar({ onSearchResult }) {
     if (!searchInput.trim()) return; 
 
     try {
-      const response = await axios.get(`https://e6a3-14-195-132-106.ngrok-free.app/search/${searchType}/${searchInput}`);
+      const response = await axios.get(`https://f932-14-195-132-106.ngrok-free.app/search/${searchType}/${searchInput}`);
       onSearchResult(response.data);
       setSearchInput(''); 
     } catch (error) {
