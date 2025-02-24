@@ -8,7 +8,7 @@ export default function ListEmployee() {
   useEffect(() => {
     axios.get('https://f932-14-195-132-106.ngrok-free.app/listEmployees')
       .then(response => {
-        console.log(response.json());
+      
         console.log("API Response:", response.data);
         setEmployees(response.data);
       })
