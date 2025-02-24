@@ -28,7 +28,7 @@ export default function UpdateEmployee() {
       return;
     }
 
-    axios.get(`https://e6a3-14-195-132-106.ngrok-free.app/search/id/${employee.id}`)
+    axios.get(`https://f932-14-195-132-106.ngrok-free.app/search/id/${employee.id}`)
       .then(response => {
         setEmployee(response.data);
         setSnackbarMessage("Employee data fetched successfully.");
@@ -54,7 +54,7 @@ export default function UpdateEmployee() {
       return;
     }
 
-    axios.put('https://e6a3-14-195-132-106.ngrok-free.app/updateEmployee', employee)
+    axios.put('https://f932-14-195-132-106.ngrok-free.app/updateEmployee', employee)
       .then(response => {
         setSnackbarMessage("Employee updated successfully!");
         setSnackbarSeverity("success");
