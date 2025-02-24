@@ -6,7 +6,7 @@ export default function ListEmployee() {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-    axios.get('https://e6a3-14-195-132-106.ngrok-free.app/listEmployees')
+    axios.get('https://f932-14-195-132-106.ngrok-free.app/listEmployees')
       .then(response => {
         console.log(response.json());
         console.log("API Response:", response.data);
