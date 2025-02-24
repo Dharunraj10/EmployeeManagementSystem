@@ -12,7 +12,7 @@ export default function PaginationEmployee() {
 
   
   const fetchEmployees = (currentPage, pageSize, sortField, sortOrder) => {
-    axios.get(`https://bddc-14-195-132-106.ngrok-free.app/paginationSorting/${currentPage}/${pageSize}/${sortField}?sortDir=${sortOrder}`)
+    axios.get(`https://e6a3-14-195-132-106.ngrok-free.app/paginationSorting/${currentPage}/${pageSize}/${sortField}?sortDir=${sortOrder}`)
       .then(response => {
         console.log("API Response:", response.data);
         setEmployees(response.data.content);
