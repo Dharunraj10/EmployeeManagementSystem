@@ -28,7 +28,7 @@ export default function UpdateEmployee() {
       return;
     }
 
-    axios.get(`http://localhost:8080/search/id/${employee.id}`)
+    axios.get(`https://bddc-14-195-132-106.ngrok-free.app/search/id/${employee.id}`)
       .then(response => {
         setEmployee(response.data);
         setSnackbarMessage("Employee data fetched successfully.");
@@ -54,7 +54,7 @@ export default function UpdateEmployee() {
       return;
     }
 
-    axios.put('http://localhost:8080/updateEmployee', employee)
+    axios.put('https://bddc-14-195-132-106.ngrok-free.app/updateEmployee', employee)
       .then(response => {
         setSnackbarMessage("Employee updated successfully!");
         setSnackbarSeverity("success");
