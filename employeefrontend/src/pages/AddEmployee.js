@@ -30,7 +30,7 @@ export default function AddEmployee() {
       return;
     }
 
-    axios.post('https://e6a3-14-195-132-106.ngrok-free.app/addEmployee', employee)
+    axios.post(' https://f932-14-195-132-106.ngrok-free.app/addEmployee', employee)
       .then(response => {
         setSnackbarMessage("Employee added successfully!");
         setSnackbarSeverity("success");
