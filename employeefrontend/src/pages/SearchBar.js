@@ -10,7 +10,7 @@ export default function SearchBar({ onSearchResult }) {
     if (!searchInput.trim()) return; 
 
     try {
-      const response = await axios.get(`https://empmanagement-backend-k7gy.onrender.com/${searchType}/${searchInput}`);
+      const response = await axios.get(`https://empmanagement-backend-k7gy.onrender.com/search/${searchType}/${searchInput}`);
       onSearchResult(response.data);
       setSearchInput(''); 
     } catch (error) {
