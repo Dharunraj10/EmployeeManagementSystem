@@ -28,7 +28,7 @@ export default function UpdateEmployee() {
       return;
     }
 
-    axios.get(`https://f932-14-195-132-106.ngrok-free.app/search/id/${employee.id}`)
+    axios.get(`https://empmanagement-backend-k7gy.onrender.com/search/id/${employee.id}`)
       .then(response => {
         setEmployee(response.data);
         setSnackbarMessage("Employee data fetched successfully.");
@@ -54,7 +54,7 @@ export default function UpdateEmployee() {
       return;
     }
 
-    axios.put('https://f932-14-195-132-106.ngrok-free.app/updateEmployee', employee)
+    axios.put('https://empmanagement-backend-k7gy.onrender.com/updateEmployee', employee)
       .then(response => {
         setSnackbarMessage("Employee updated successfully!");
         setSnackbarSeverity("success");
