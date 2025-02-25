@@ -52,7 +52,7 @@ export default function MenuBar({ onSearchResult }) {
 
           {observabilityOpen && (
             <>
-              <MenuItem component="a" href="https://f932-14-195-132-106.ngrok-free.app/swagger-ui/index.html" target="_blank" onClick={handleMenuClose}>
+              <MenuItem component="a" href="https://empmanagement-backend-k7gy.onrender.com/swagger-ui/index.html" target="_blank" onClick={handleMenuClose}>
                 Swagger
               </MenuItem>
               <MenuItem component="a" href="http://localhost:5601" target="_blank" onClick={handleMenuClose}>
