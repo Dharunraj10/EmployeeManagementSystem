@@ -16,7 +16,7 @@ export default function DeleteEmployee() {
       return;
     }
 
-    axios.delete(`https://f932-14-195-132-106.ngrok-free.app/deleteEmployee/${employeeId}`)
+    axios.delete(`https://empmanagement-backend-k7gy.onrender.com/deleteEmployee/${employeeId}`)
       .then(() => {
         setSnackbarMessage("Employee deleted successfully!");
         setSnackbarSeverity("success");
