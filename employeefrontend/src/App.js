@@ -26,18 +26,9 @@ function MainContent({ searchResult, setSearchResult }) {
   }, [location.pathname, setSearchResult]);
 
   return (
-    <Box sx={{
-      display: 'flex', 
-      flexDirection: 'column', 
-      minHeight: '100vh', // Make the Box take up the full height of the screen
-    }}>
+    <>
       <MenuBar onSearchResult={setSearchResult} />
-      <Box sx={{
-        flexGrow: 1, // This makes the content area stretch and fill available space
-        p: 3,
-        display: 'flex',
-        flexDirection: 'column',
-      }}>
+      <Box sx={{ p: 3 }}>
         {searchResult === undefined ? (
           <Routes>
             <Route path="/list" element={<ListEmployee />} />
@@ -58,6 +49,6 @@ function MainContent({ searchResult, setSearchResult }) {
           <Alert severity="error">No Employee Found</Alert>
         )}
       </Box>
-    </Box>
+    </>
   );
 }
