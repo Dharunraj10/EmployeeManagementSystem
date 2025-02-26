@@ -21,6 +21,7 @@ export default function App() {
 function MainContent({ searchResult, setSearchResult }) {
   const location = useLocation();
 
+  // Reset searchResult on route change
   React.useEffect(() => {
     setSearchResult(undefined);
   }, [location.pathname, setSearchResult]);
@@ -30,7 +31,9 @@ function MainContent({ searchResult, setSearchResult }) {
       <MenuBar onSearchResult={setSearchResult} />
       <Box sx={{ p: 3 }}>
         {searchResult === undefined ? (
+          // Define all the routes for your app
           <Routes>
+            <Route path="/" element={<ListEmployee />} />
             <Route path="/list" element={<ListEmployee />} />
             <Route path="/add" element={<AddEmployee />} />
             <Route path="/update" element={<UpdateEmployee />} />
@@ -38,6 +41,7 @@ function MainContent({ searchResult, setSearchResult }) {
             <Route path="/deleteemployee" element={<DeleteEmployee />} />
           </Routes>
         ) : searchResult ? (
+          // Show search result if there's a result
           <Paper sx={{ p: 2 }}>
             <Typography variant="h6">Search Result</Typography>
             <Typography><strong>ID:</strong> {searchResult.id}</Typography>
@@ -46,6 +50,7 @@ function MainContent({ searchResult, setSearchResult }) {
             <Typography><strong>Salary:</strong> {searchResult.salary}</Typography>
           </Paper>
         ) : (
+          // Show error message if no result found
           <Alert severity="error">No Employee Found</Alert>
         )}
       </Box>
